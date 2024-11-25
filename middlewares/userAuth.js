@@ -2,8 +2,6 @@ const express = require("express");
 const db = require("../config/database");
 const User = db.users;
 
-// Function to check if username or email already exist in the database
-// This is to avoid having two users with the same username and email
 const saveUser = async (req, res, next) => {
   try {
     // Check if username exists

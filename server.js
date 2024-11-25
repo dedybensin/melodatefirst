@@ -13,7 +13,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// Synchronizing the database and forcing it to false so we dont lose data
 db.sequelize.sync().then(() => {
     console.log("Database telah berhasil disinkronisasi");
 });
